@@ -1,4 +1,4 @@
-<?php
+<!-- <?php
 
 /*
 |--------------------------------------------------------------------------
@@ -11,16 +11,16 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
-//route Basic
-Route::get('/about',function(){
-	return '<h1>Halo</h1>'.
-	       'Selamat datang di webapp saya<br>'.
-	       'Laravel, emang keren.';
-});
+// //route Basic
+// Route::get('/about',function(){
+// 	return '<h1>Halo</h1>'.
+// 	       'Selamat datang di webapp saya<br>'.
+// 	       'Laravel, emang keren.';
+// });
 
 // Route::get('profil',function()
 // {
@@ -53,10 +53,28 @@ Route::get('/about',function(){
 // 	return 'makanan Yang saya pesan adalah <br>'.$mkn.'</b>';
 // });
 
-Route::get('pesan/{makan}/{minum}/{harga}',function($mkn,$mnm,$hrg){
-	return 'makanan Yang saya pesan adalah '.$mkn
-	       .'<br>minuman yang saya pesan adalah '.$mnm
-	       .'<br>Total Harganya adalah '.$hrg;
-});
+// // Route opsional paramter
+// Route::get('halo/{nama?}',function($nama='Nurhadi'){
+// 	return 'halo nama saya adalah '.$nama;
+// });
 
+// Route::get('pesan/{a?}/{b?}/{c?}',function($mkn=null,$minum=null,$harga=null){
+// 	if(isset($mkn)){
+// 		$mkn = "Anda Memesan $mkn";
+// 		echo $mkn;
+// 	}
+// 	if(isset($minum)){
+// 		$minum = " & $minum";
+// 		echo $minum;
+// 	}
+// 	if(isset($harga)){
+// 		$harga = " dengan harga $harga";
+// 		echo $harga;
+// 	}
+// 	if(!$mkn && !$minum && !$harga){
+// 		return " Anda Belum Memesan Sesuatu";
+// 	}
 
+// });
+
+//  -->
