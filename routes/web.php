@@ -127,4 +127,34 @@ Route::get('/testmodel6',function(){
 Route::get('/latihan',function(){
 	$query = App\Latihan::all();
 	return $query;
+}); 
+
+Route::get('latihan/-1',function(){
+	$query = App\Latihan::where('agama','=','islam')->get();
+	return $query;
+});
+
+Route::get('latihan/-2',function(){
+	$query = App\Latihan::select('id','nama','agama')
+            ->where('agama','=','islam')
+	        ->get();
+	return $query;
+});
+
+Route::get('latihan/{id}',function($id){
+	$query = App\Latihan::findOrFail($id);
+	return $query;
+});
+
+Route::get('tambah-latihan',function(){
+	$query = New App\Latihan();
+	$query->nama = 'indah Mambo';
+	$query->jabatan = 'sekretaris';
+	$query->jk = 'perempuan';
+	$query->alamat = 'Bojong Honey';
+	$query->total_gaji = 500000;
+	$query->agama = 'islam';
+	$query->save();
+	return $query;
+
 });
