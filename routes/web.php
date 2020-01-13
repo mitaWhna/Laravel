@@ -158,3 +158,12 @@ Route::get('tambah-latihan',function(){
 	return $query;
 
 });
+
+Route::get('mita','SekolahController@hallo');
+Route::get('ngra','SekolahController@negara');
+Route::get('hewan','SekolahController@kucing');
+Route::get('school','SekolahController@sekolah');
+Route::get('sayur','SekolahController@wortel');
+Route::get('komik','SekolahController@buku');
+Route::get('warnakucing/{warna?}','SekolahController@jeniskucing');
+Route::get('jual/{beli?}','SekolahController@penjualan');
