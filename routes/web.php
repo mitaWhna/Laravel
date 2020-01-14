@@ -166,4 +166,11 @@ Route::get('school','SekolahController@sekolah');
 Route::get('sayur','SekolahController@wortel');
 Route::get('komik','SekolahController@buku');
 Route::get('warnakucing/{warna?}','SekolahController@jeniskucing');
-Route::get('jual/{beli?}','SekolahController@penjualan');
+Route::get('jual/{mkn?}/{hrg?}','SekolahController@penjualan');
+
+// Crud Book
+Route::get('book','BookController@index');
+Route::get('book-create/{judul}','BookController@create');
+Route::get('book/{id}', 'BookController@show');
+Route::get('book-edit/{id}/{jdl}', 'BookController@edit');
+Route::get('book-delete/{id}','BookController@delete');

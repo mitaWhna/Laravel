@@ -43,13 +43,27 @@ class SekolahController extends Controller
 
     }
 
-    public function penjualan($beli=null)
+    
+    public function penjualan($mkn=null,$hrg=null)
     {
-    	if (!$beli){
-    		return "silahkan masukan item terlebih dahulu";
-    	}else{
-    		return "anda membeli :".$beli;
+    	if(!$mkn){
+    		$a = "anda membeli $mkn";
+    		echo $a;
     	}
+    	if($hrg){
+    		if($hrg>= 15000){
+    			echo "anda membeli $mkn dengan ukuran jumbo";
+    		}
+    		elseif($hrg < 15000 && $hrg >= 7500){
+    			echo "anda membeli $mkn dengan ukuran medium";
+    		}
+    		elseif($hrg < 7500) {
+    			echo "anda membeli $mkn dengan ukuran small";
+    		}	
+    	}
+    		if(!$mkn){
+    			return "silahkan masukan item terlebih dahulu";
 
-    }
-}
+    		}
+    	}
+    }	
