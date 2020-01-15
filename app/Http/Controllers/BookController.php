@@ -53,11 +53,11 @@ class BookController extends Controller
     	$book->delete();
     	return $book;
     }
-    public function latihan1()
-    {
-    	$a = NamaModel::select('')->take(3)->get();
-    	return $a;
-    }
-    public
+    // public function latihan1()
+    // {
+    // 	$a = NamaModel::select('')->take(3)->get();
+    // 	return $a;
+    // }
+    // public
 
 }

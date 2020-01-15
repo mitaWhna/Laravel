@@ -174,3 +174,13 @@ Route::get('book-create/{judul}','BookController@create');
 Route::get('book/{id}', 'BookController@show');
 Route::get('book-edit/{id}/{jdl}', 'BookController@edit');
 Route::get('book-delete/{id}','BookController@delete');
+
+ //Crud Artikel / Arikel resource
+// Route::get('artikel','CrudController@index');
+// Route::get('artikel/create', 'CrudController@create'); 
+// Route::get('artikel/{id}', 'CrudController@show'); 
+// Route::get('artikel/{id}/edit', 'CrudController@edit');
+// Route::PUT('artikel/{id}', 'CrudController@update');
+// Route::DELETE('artikel/{id}', 'CrudController@destroy');
+
+Route::resource('artikel','CrudController');
